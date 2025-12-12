@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alumni Feedback Form | Geeta University</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #f7f7f7, #ececec);
+      font-family: "Inter", sans-serif;
+    }
+
+    .brand-header {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .brand-header img {
+      height: 80px;
+      margin-bottom: 10px;
+    }
+
+    .brand-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #d6001c;
+      letter-spacing: 0.5px;
+    }
+
+    .form-card {
+      max-width: 800px;
+      margin: auto;
+      background: #ffffffcc;
+      backdrop-filter: blur(8px);
+      padding: 35px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .form-label {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .btn-brand {
+      background-color: #d6001c;
+      color: white;
+      padding: 12px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      transition: 0.2s ease-in-out;
+    }
+
+    .btn-brand:hover {
+      background-color: #b00018;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      margin-top: 25px;
+      font-weight: 700;
+      color: #1a1a1a;
+      border-left: 4px solid #d6001c;
+      padding-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ======================= Branding ========================= -->
+<div class="brand-header">
+  <img src="https://geetauniversity.edu.in/uploads/all/754/GU-Logo-PNG-(1).webp" alt="Geeta University Logo">
+  <div class="brand-title">Geeta University — Alumni Feedback Form</div>
+</div>
+
+
+<!-- ======================= Form Card ========================= -->
+<div class="form-card">
+
+  <h3 class="text-center mb-4 fw-bold">Alumni Feedback on Curriculum</h3>
+
+  <form action="https://formspree.io/f/mldqoqlg" method="POST" id="alumniForm">
+
+    <!-- Personal Information -->
+    <div class="section-title">Personal Information</div>
+
+    <div class="mt-3 mb-3">
+      <label class="form-label">Name of the Alumni *</label>
+      <input type="text" class="form-control" name="alumni_name" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Name of the School *</label>
+      <select class="form-select" name="school" required>
+        <option value="" disabled selected>Select your School</option>
+        <option>School of Computer Science & Engineering</option>
+        <option>School of Commerce & Business Management</option>
+        <option>Geeta Institute of Pharmacy</option>
+        <option>School of Agricultural Sciences</option>
+        <option>School of Sciences</option>
+        <option>School of Health & Allied Sciences</option>
+        <option>School of Humanities & Social Sciences</option>
+        <option>Geeta Global Law School</option>
+        <option>School of Hospitality & Hotel Management</option>
+        <option>School of Engineering</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Year of Pass Out *</label>
+      <select class="form-select" name="year_of_passout" required>
+        <option disabled selected>Select Year</option>
+        <option>2022</option>
+        <option>2023</option>
+        <option>2024</option>
+        <option>Before 2022</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Current Role / Designation *</label>
+      <input type="text" class="form-control" name="current_role" required>
+    </div>
+
+
+    <!-- Feedback Section -->
+    <div class="section-title">Curriculum Feedback</div>
+
+    <div class="mt-3 mb-3">
+      <label class="form-label">The program provides knowledge essential for career development. *</label>
+      <select class="form-select" name="q1_career_development" required>
+        <option disabled selected>Select</option>
+        <option>Strongly disagree</option>
+        <option>Disagree</option>
+        <option>Neutral</option>
+        <option>Agree</option>
+        <option>Strongly agree</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">
+        The program supports students in pursuing business or entrepreneurial ventures. *
+      </label>
+      <select class="form-select" name="q2_entrepreneur_support" required>
+        <option disabled selected>Select</option>
+        <option>Strongly disagree</option>
+        <option>Disagree</option>
+        <option>Neutral</option>
+        <option>Agree</option>
+        <option>Strongly agree</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">
+        Seminars, workshops, and guest lectures help link course knowledge to real-world applications. *
+      </label>
+      <select class="form-select" name="q3_real_world" required>
+        <option disabled selected>Select</option>
+        <option>Strongly disagree</option>
+        <option>Disagree</option>
+        <option>Neutral</option>
+        <option>Agree</option>
+        <option>Strongly agree</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">
+        Courses on ethics, sustainability, and CSR contribute to professional growth. *
+      </label>
+      <select class="form-select" name="q4_ethics" required>
+        <option disabled selected>Select</option>
+        <option>Strongly disagree</option>
+        <option>Disagree</option>
+        <option>Neutral</option>
+        <option>Agree</option>
+        <option>Strongly agree</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">
+        Group assignments and collaborative projects foster teamwork skills. *
+      </label>
+      <select class="form-select" name="q5_teamwork" required>
+        <option disabled selected>Select</option>
+        <option>Strongly disagree</option>
+        <option>Disagree</option>
+        <option>Neutral</option>
+        <option>Agree</option>
+        <option>Strongly agree</option>
+      </select>
+    </div>
+
+    <!-- Submit -->
+    <button class="btn btn-brand w-100 mt-3" type="submit">Submit Feedback</button>
+
+    <p class="mt-3 text-success d-none" id="successMsg">
+      Thank you! Your response has been successfully submitted.
+    </p>
+
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById('alumniForm');
+  const successMsg = document.getElementById('successMsg');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const res = await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { "Accept": "application/json" }
+    });
+
+    if (res.ok) {
+      successMsg.classList.remove("d-none");
+      form.reset();
+    }
+  });
+</script>
+
+</body>
+</html>
